@@ -27,6 +27,10 @@ function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemonToLi).join('')
         pokemonList.innerHTML += newHtml
+        window.scroll({
+            top: document.body.scrollHeight,
+            behavior: "smooth",
+          })
     })
 }
 
@@ -43,5 +47,6 @@ loadMoreButton.addEventListener('click', () => {
         loadMoreButton.parentElement.removeChild(loadMoreButton)
     } else {
         loadPokemonItens(offset, limit)
+        
     }
 })

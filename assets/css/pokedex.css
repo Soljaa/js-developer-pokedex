@@ -87,8 +87,7 @@
 }
 
 .pokemon .number {
-    color: #000;
-    opacity: .3;
+    color: #ffffff;    
     text-align: right;
     font-size: .625rem;
 }
@@ -144,6 +143,15 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 3rem;
+    color: #ffcc03;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #3466AF;
 }
 
 @media screen and (min-width: 380px) {
