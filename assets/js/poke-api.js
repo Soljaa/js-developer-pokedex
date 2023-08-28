@@ -13,6 +13,15 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.type = type
 
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
+    let statsObj = {}
+    pokeDetail.stats.forEach(element => {
+        statsObj[element.stat.name] = element.base_stat
+    });
+    pokemon.stats = statsObj
+
+    pokemon.weight = pokeDetail.weight
+    pokemon.height = pokeDetail.height
+    pokemon.ability = pokeDetail.abilities[0].ability.name
 
     return pokemon
 }

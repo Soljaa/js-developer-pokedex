@@ -26,7 +26,12 @@
 </head>
 
 <body>
-    <section class="content">
+    <div class="modal" id="details">
+        <btn class="close-modal" type="button" id="modalBtn"> X </btn>
+        <div id="inner"></div>
+        <!-- ..... modal here ..... -->
+    </div>
+    <section class="content" id="content">
         <h1>Pokedex</h1>
 
         <ol id="pokemonList" class="pokemons">
@@ -39,6 +44,7 @@
             </button>
         </div>
     </section>
+
 
     <!-- Nosso JS -->
     <script src="/assets/js/pokemon-model.js"></script>
